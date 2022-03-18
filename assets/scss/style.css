@@ -1,0 +1,18 @@
+body {
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 25px;
+}
+
+body h1, body h3 {
+  font-weight: 800;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  color: var(--dark);
+  line-height: 1.25;
+}
+/*# sourceMappingURL=style.css.map */

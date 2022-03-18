@@ -1,0 +1,24 @@
+$primary: rgb(200,200,255);
+$secondary: rgb(75,75,75);
+$tertiary: rgb(6, 85, 10);
+$quaternary: rgb(25,25,25);
+
+
+
+
+body {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 25px;
+    h1, h3 {
+        font-weight: 800;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 0;
+        color: var(--dark);
+        line-height: 1.25;
+    }
+}

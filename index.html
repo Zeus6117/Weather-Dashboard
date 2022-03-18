@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+<!--bootstrap-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+<!--css stylesheet-->
+<link rel="stylesheet" href="./assets/scss/style.css">
+<!--scss stylesheet-->
+<link rel="stylesheet" href="./assets/scss/style.scss">
+</head>
+<body class="min-100-vh row d-flex">
+    <header>
+        <article class="jumbotron container-fluid mt-2 text-center">
+            <h1>Weather Dashboard</h1>
+        </article>
+    </header>
+    <section class="col-12 col-md-4">
+        <!--card 0/search by city-->
+        <article class="card">
+            <h3 class="card-header">Search for a city</h3>
+            <!--form start-->
+            <form id="user-form" class="card-body column">
+                <label class="form-label" for="city">City</label>
+                <input name="city" id="city" type="text" autofocus="true" class="form-input"
+                placeholder="Type City Name Here">
+                <button type="submit text-align-center" class="btn searchBtn"><i class="fa fa-search"></i>
+                    Search</button>
+            </form>
+        </article>
+        <!--card 1/city search history-->
+        <article class="card column">
+            <h3 class="card-header">Search History</h3>
+            <!--container for search history-->
+            <ul class="list-group" id="city-history"></ul>
+        </article>
+    </section>
+    <!--current weather container-->
+    <section class="column ml-4" id="current-weather-container">
+        <article class="column ml-2 border border-dark rounded">
+            <aside class="col-12" id="current-weather">
+                <div id="city-details"></div>
+                <div id="city-details"></div>
+                <span id="current-date"></span>
+                <p>Temp: <span class="current" id="current-temp"></span></p>
+                <p>Humidity: <span class="current" id="current-hum"></span></p>
+                <p>Wind Speed: <span class="current" id="current-wind"></span></p>
+                <p> UV Index: <span class="current rounded py-2 px-2" id="uvi"></span></p>
+            </aside>
+        </article>
+    </section>
+       <!--future weather data-->
+       <div class="col-md-12" id="future-weather">
+        <h3> 5-Day Forecast:</h3>
+        <section class="row">
+            <div id="future-city-details"></div>
+            <!--day 1-->
+            <article class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                <div id="weather0"></div>
+                <p id="date0"></p>
+                <span id="weather-icon0"></span>
+                <p>Temp: <span id="temp-0"></span></p>
+                <p>Wind: <span id="wind-0"></span></p>
+                <p>Humidity: <span id="humidity-0"></span></p>
+            </article>
+            <!--day 2-->
+            <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                <div id="weather1"></div>
+                <p id="date1"></p>
+                <span id="weather-icon1"></span>
+                <p>Temp: <span id="temp-1"></span></p>
+                <p>Wind: <span id="wind-1"></span></p>
+                <p>Humidity: <span id="humidity-1"></span></p>
+            </div>
+            <!--day 3-->
+            <article class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                <div id="weather2"></div>
+                <p id="date2"></p>
+                <span id="weather-icon2"></span>
+                <p>Temp: <span id="temp-2"></span></p>
+                <p>Wind: <span id="wind-2"></span></p>
+                <p>Humidity: <span id="humidity-2"></span></p>
+            </article>
+            <!--day 4-->
+            <article class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                <div id="weather3"></div>
+                <p id="date3"></p>
+                <span id="weather-icon3"></span>
+                <p>Temp: <span id="temp-3"></span></p>
+                <p>Wind: <span id="wind-3"></span></p>
+                <p>Humidity: <span id="humidity-3"></span></p>
+            </article>
+            <!--day 5-->
+            <article class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                <div id="weather4"></div>
+                <p id="date4"></p>
+                <span id="weather-icon4"></span>
+                <p>Temp: <span id="temp-4"></span></p>
+                <p>Wind: <span id="wind-4"></span></p>
+                <p>Humidity: <span id="humidity-4"></span> </p>
+            </article>
+        </section>
+    </div>
+    <!--jquery script-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--javascript-->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
