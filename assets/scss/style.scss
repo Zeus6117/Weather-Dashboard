@@ -1,24 +1,91 @@
 $primary: rgb(200,200,255);
-$secondary: rgb(75,75,75);
+$secondary: rgb(225,225,225);
 $tertiary: rgb(6, 85, 10);
 $quaternary: rgb(25,25,25);
-
-
-
+$border: 0.2rem;
 
 body {
-    background-color: var(--primary);
+    background-color: $primary;
     margin: 0;
     padding: 0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: var(--dark);
+    color: $quaternary;
     line-height: 1.5;
-    font-size: 25px;
-    h1, h3 {
-        font-weight: 800;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        margin: 0;
-        color: var(--dark);
-        line-height: 1.25;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    article {
+        background-color: $tertiary;
+        color: $primary;
+    }
+    aside {
+        background-color: $primary;
+        color: $tertiary;
+    }
+    p {
+        font-size: 1.2rem;
     }
 }
+
+.btn {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: $border;
+    color: $tertiary;
+    border: none;
+    outline: none;
+    background-color: $primary;
+    box-shadow: 8px 8px $tertiary;
+    transform: translate(-1px, -1px);
+}
+
+.btn:hover {
+    color: $primary;
+    background-color: $tertiary;
+    transform: translate(0px, 0px);
+    box-shadow: -5px -5px $primary;
+}
+
+.jumbotron {
+    padding: 0px;
+    color: $primary;
+    background-color: $tertiary;
+    border: 5px solid $quaternary;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.city-search {
+    background-color: $secondary;
+    color: $tertiary;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.list-group {
+    padding: 0;
+    list-style: none;
+  }
+
+  .list-item {
+    margin-bottom: .1rem;
+    padding: 1.5%;
+    border-radius: $border;
+    background-color: $primary;
+    text-decoration: none;
+  }
+
+  .list-item:hover {
+      background-color: $quaternary;
+  }
+
+  .card {
+      margin: auto;
+      border: 5px solid $quaternary;
+      border-radius: $tertiary;
+  }

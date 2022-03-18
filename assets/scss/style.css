@@ -1,18 +1,94 @@
 body {
-  background-color: var(--primary);
+  background-color: #c8c8ff;
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: var(--dark);
+  color: #191919;
   line-height: 1.5;
-  font-size: 25px;
+  font-size: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body h1, body h3 {
+body article {
+  background-color: #06550a;
+  color: #c8c8ff;
+}
+
+body aside {
+  background-color: #c8c8ff;
+  color: #06550a;
+}
+
+body p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 6px 5px;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  border-radius: 0.2rem;
+  color: #06550a;
+  border: none;
+  outline: none;
+  background-color: #c8c8ff;
+  -webkit-box-shadow: 8px 8px #06550a;
+          box-shadow: 8px 8px #06550a;
+  -webkit-transform: translate(-1px, -1px);
+          transform: translate(-1px, -1px);
+}
+
+.btn:hover {
+  color: #c8c8ff;
+  background-color: #06550a;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-box-shadow: -5px -5px #c8c8ff;
+          box-shadow: -5px -5px #c8c8ff;
+}
+
+.jumbotron {
+  padding: 0px;
+  color: #c8c8ff;
+  background-color: #06550a;
+  border: 5px solid #191919;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+.city-search {
+  background-color: #e1e1e1;
+  color: #06550a;
   font-weight: 800;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
-  color: var(--dark);
   line-height: 1.25;
+}
+
+.list-group {
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  margin-bottom: .1rem;
+  padding: 1.5%;
+  border-radius: 0.2rem;
+  background-color: #c8c8ff;
+  text-decoration: none;
+}
+
+.list-item:hover {
+  background-color: #191919;
+}
+
+.card {
+  margin: auto;
+  border: 5px solid #191919;
+  border-radius: #06550a;
 }
 /*# sourceMappingURL=style.css.map */
