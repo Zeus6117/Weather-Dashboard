@@ -41,3 +41,44 @@ var day9 = document.getElementById("weather8");
 var day10 = document.getElementById("weather9");
 
 let citySearchHistory = JSON.parse(localStorage.getItem(city)) || [];
+
+var formSubmitHandler = function (event) {
+    //stops page from refreshing
+    event.preventDefault();
+  
+    var city = cityInputEl.value.trim();
+  
+    //gets value from the city input element and runs getCityWeather function
+    if (city) {
+      getCityWeather(city);
+      cityHistory(city);
+      //clear out old content
+      cityInputEl.value = "";
+    }
+  };
+
+  fetch(UVQueryURL).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (data) {
+        console.log(data);
+        console.log(data[0].value);
+
+        // Conditional if value is greater than 7 and less than 11
+        if (data[0].value > 7 && data[0].value < 11) {
+          UVI.className = "bg-danger text-white rounded py-2 px-2";
+          UVI.innerText = data[0].value;
+
+          // Conditional if value is greater than 2 and less than 7
+        } else if (data[0].value > 2 && data[0].value < 7) {
+          UVI.className = "bg-warning text-white rounded py-2 px-2";
+          UVI.innerText = data[0].value;
+          // Conditional if value is greater than 0 and less than 2
+        } else if (data[0].value > 0 && data[0].value < 2) {
+          UVI.className = "bg-success text-white rounded py-2 px-2";
+          UVI.innerText = data[0].value;
+        }
+      });
+    } else {
+      alert("Error -" + response.statusText);
+    }
+  });
