@@ -19,7 +19,7 @@ var cityCurrentWeatherEl = document.getElementById("city-details");
 //declare UV index container
 var UVI = document.getElementById("uvi");
 
-//future weather variable
+//future weather variables
 var day1 = document.getElementById("weather0");
 
 var day2 = document.getElementById("weather1");
