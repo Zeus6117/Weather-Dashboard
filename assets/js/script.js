@@ -94,4 +94,29 @@ var formSubmitHandler = function (event) {
     "&appid=" +
     apiKey;
     console.log(apiURL);
+    fetch(apiURL).then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          console.log(data);
+          
+          let lat = data.city.coord.lat;
+
+          console.log(data.city.coord.let);
+
+          let lon = data.city.coord.lon;
+
+          console.log(data.city.coord.lon);
+
+          //setting UVI URL
+          let UVQueryURL =
+          "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" +
+          lat +
+          "&lon=" +
+          lon +
+          "&appid=" +
+          apiKey +
+          "&cnt=1";
+        })
+      }
+    })
   }
