@@ -192,9 +192,9 @@ var formSubmitHandler = function (event) {
           // day 2
           var day2Icon = document.createElement("img");
 
-          var day2Url = `https://openweathermap.org/img/w/${data.list[20].weather[0].icon}.png`;
-
           var day2Date = document.getElementById("date2");
+          
+          var day2Url = `https://openweathermap.org/img/w/${data.list[20].weather[0].icon}.png`;
 
           var day2Temperature = document.getElementById("temperature-2");
           var day2Wind = document.getElementById("wind-2");
@@ -214,9 +214,9 @@ var formSubmitHandler = function (event) {
           //say 3
           var day3Icon = document.createElement("img");
 
-          var day3Url = `https://openweathermap.org/img/w/${data.list[28].weather[0].icon}.png`;
-
           var day3Date = document.getElementById("date3");
+          
+          var day3Url = `https://openweathermap.org/img/w/${data.list[28].weather[0].icon}.png`;
 
           var day3Temperature = document.getElementById("temperature-3");
           var day3Wind = document.getElementById("wind-3");
@@ -257,122 +257,6 @@ var formSubmitHandler = function (event) {
           day4Temperature.innerText = data.list[36].main.temp + "  °F";
           day4Wind.innerText = data.list[36].wind.speed + " MPH";
           day4Humidity.innerText = data.list[36].main.humidity + " %";
-
-          //day 5
-
-          var day5Icon = document.createElement("img");
-
-          var day5Date = document.getElementById("date5");
-
-          var day5Url = `https://openweathermap.org/img/w/${data.list[44].weather[0].icon}.png`;
-
-          var day5Temperature = document.getElementById("temperature-5");
-          var day5Wind = document.getElementById("wind-5");
-          var day5Humidity = document.getElementById("humidity-5");
-
-          day5Date.innerText = data.list[44].dt_txt;
-
-          //clear day 5
-          day5.innerHTML = "";
-          day5.prepend(day5Icon);
-
-          day5Icon.setAttribute("src", day5Url);
-
-          day5Temperature.innerText = data.list[44].main.temp + "  °F";
-          day5Wind.innerText = data.list[44].wind.speed + " MPH";
-          day5Humitidy.innerText = data.list[44].main.humidity + " %";
-
-          //day 6
-
-          var day6Icon = document.createElement("img");
-
-          var day6Date = document.getElementById("date6");
-
-          var day6Url = `https://openweathermap.org/img/w/${data.list[52].weather[0].icon}.png`;
-
-          var day6Temperature = document.getElementById("temperature-6");
-          var day6Wind = document.getElementById("wind-6");
-          var day6Humidity = document.getElementById("humidity-6");
-
-          day6Date.textContent = data.list[52].dt_txt;
-
-          //clear day 6
-          day6.innerHTML = "";
-
-          day6.prepend(day6Icon);
-
-          day6Icon.setAttribute("src", day6Url);
-          day6Temperature.innerText = data.list[52].main.temp + "  °F";
-          day6Wind.innerText = data.list[52].wind.speed + " MPH";
-          day6Humidity.innerText = data.list[52].main.humidity + " %";
-
-          //day 7
-          var day7Icon = document.createElement("img");
-
-          var day7Url = `https://openweathermap.org/img/w/${data.list[60].weather[0].icon}.png`;
-
-          var day7Date = document.getElementById("date7");
-
-          var day7Temperature = document.getElementById("temperature-7");
-          var day7Wind = document.getElementById("wind-7");
-          var day7Humidity = document.getElementById("humidity-7");
-
-          day7Date.textContent = data.list[60].dt_txt;
-
-          //clear day 7
-          day7.innerHTML = "";
-          day7.prepend(day7Icon);
-
-          day7Icon.setAttribute("src", day7Url);
-          day7Temperature.innerText = data.list[60].main.temp + "  °F";
-          day7Wind.innerText = data.list[60].wind.speed + " MPH";
-          day7Humidity.innerText = data.list[60].main.humidity + " %";
-
-          //day 8
-          var day8Icon = document.createElement("img");
-
-          var day8Url = `https://openweathermap.org/img/w/${data.list[68].weather[0].icon}.png`;
-
-          var day8Date = document.getElementById("date8");
-
-          var day8Temperature = document.getElementById("temperature-8");
-          var day8Wind = document.getElementById("wind-8");
-          var day8Humidity = document.getElementById("humidity-8");
-
-          day8Date.textContent = data.list[68].dt_txt;
-
-          //clear day 8
-          day8.innerHTML = "";
-
-          day8.prepend(day8Icon);
-
-          day8Icon.setAttribute("src", day8Url);
-          day8Temperature.innerText = data.list[68].main.temp + "  °F";
-          day8Wind.innerText = data.list[68].wind.speed + " MPH";
-          day8Humidity.innerText = data.list[68].main.humidity + " %";
-
-          //day 9
-          var day9Icon = document.createElement("img");
-
-          var day9Url = `https://openweathermap.org/img/w/${data.list[76].weather[0].icon}.png`;
-
-          var day9Date = document.getElementById("date9");
-
-          var day9Temperature = document.getElementById("temperature-9");
-          var day9Wind = document.getElementById("wind-9");
-          var day9Humidity = document.getElementById("humidity-9");
-
-          day9Date.textContent = data.list[76].dt_txt;
-
-          //clear day 9
-          day9.innerHTML = "";
-
-          day9.prepend(day9Icon);
-
-          day9Icon.setAttribute("src", day9Url);
-          day9Temperature.innerText = data.list[76].main.day0Temp + "  °F";
-          day9Wind.innerText = data.list[76].wind.speed + " MPH";
-          day9Humidity.innerText = data.list[76].main.humidity + " %";
         });
 
             // Else statement if city does not return with ok response
