@@ -82,3 +82,16 @@ var formSubmitHandler = function (event) {
       alert("Error -" + response.statusText);
     }
   });
+
+  var getCityWeather = function (city) {
+
+    var apiURL =
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    //user's city input
+    city +
+    "&units=imperial" +
+    //API Key
+    "&appid=" +
+    apiKey;
+    console.log(apiURL);
+  }
